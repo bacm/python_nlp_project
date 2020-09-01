@@ -105,3 +105,6 @@ dist
 
 # Flask directory
 __pycache__/
+
+# Dist folder
+app/
