@@ -9,7 +9,8 @@ export const GetTextAnalysis = (text: string) => async (dispatch:Dispatch<TextAn
             type: TEXT_ANALYSIS_LOADING,
         });
 
-        const res = await axios.post('http://127.0.0.1:5000/process', { text });
+        debugger;
+        const res = await axios.post(`${process.env.ANALYSE_API}/process`, { text });
 
         dispatch({
             type: TEXT_ANALYSIS_SUCCESS,

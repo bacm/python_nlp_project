@@ -1,6 +1,7 @@
 const path = require('path'),
     webpack = require('webpack'),
-    HtmlWebpackPlugin = require('html-webpack-plugin');
+    HtmlWebpackPlugin = require('html-webpack-plugin'),
+    Dotenv = require('dotenv-webpack');
 
 module.exports = {
     entry: {
@@ -41,6 +42,10 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({ template: path.resolve(__dirname, 'client', 'src', 'app', 'index.html') }),
+        new Dotenv({
+            path: path.join("client", "config", `${process.env.NODE_ENV}.env`),
+            defaults: false
+        }),
         new webpack.HotModuleReplacementPlugin()
     ]
 }
