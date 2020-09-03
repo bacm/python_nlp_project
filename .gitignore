@@ -104,7 +104,10 @@ dist
 .tern-port
 
 # Flask directory
-__pycache__/
+__pycache__
 
-# Dist folder
-app/
+# JS Dist folder
+app/static/
+
+# own deploy file
+deploy.js

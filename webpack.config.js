@@ -4,11 +4,11 @@ const path = require('path'),
 
 module.exports = {
     entry: {
-        app: ['./src/app/App.tsx'],
+        app: ['./client/src/app/App.tsx'],
         vendor: ['react', 'react-dom']
     },
     output: {
-        path: path.join(path.resolve(__dirname), '..', 'app', 'static'),
+        path: path.join(path.resolve(__dirname), 'app', 'static'),
         filename: 'js/[name].bundle.js'
     },
     devtool: 'source-map',
@@ -40,7 +40,7 @@ module.exports = {
         ]
     },
     plugins: [
-        new HtmlWebpackPlugin({ template: path.resolve(__dirname, 'src', 'app', 'index.html') }),
+        new HtmlWebpackPlugin({ template: path.resolve(__dirname, 'client', 'src', 'app', 'index.html') }),
         new webpack.HotModuleReplacementPlugin()
     ]
 }

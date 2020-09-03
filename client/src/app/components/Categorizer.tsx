@@ -10,9 +10,9 @@ export default function Categorizer() {
     <div>
         <TextInput />
         {analysis && !analysis.loading && analysis.data && analysis.data.map((e) => 
-                <PartOfSpeech
-                    label={e.text}
-                    pos={e.pos}/>
-            )}
+            <PartOfSpeech
+                label={e.text}
+                pos={e.pos}/>
+        )}
     </div>)
 }
